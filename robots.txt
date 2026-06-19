@@ -1,0 +1,35 @@
+# robots.txt for https://weiwen0925.github.io/dazhidulun-6/
+# 開放正派搜尋引擎索引；阻擋 AI 訓練類爬蟲
+
+User-agent: *
+Allow: /
+
+# ── 阻擋 AI 訓練爬蟲 ──
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: ImagesiftBot
+Disallow: /
+
+Sitemap: https://weiwen0925.github.io/dazhidulun-6/sitemap.xml
