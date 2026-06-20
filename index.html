@@ -257,6 +257,41 @@ body{font-size:20px!important;}
   color:var(--goldL);}
 .sb-extra-label{font-size:10.5px;line-height:1.2;text-align:center;
   font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;}
+
+/* wy-cross-nav-css v1 */
+/* ── 跨卷導覽（側欄底部）── */
+.sb-cross{display:flex;flex-direction:column;align-items:center;gap:8px;
+  width:100%;margin:18px 0 4px;padding:18px 4px 6px;position:relative;}
+.sb-cross::before{content:"";position:absolute;top:0;left:14%;right:14%;
+  height:1px;background:linear-gradient(90deg,
+    transparent 0%,rgba(184,134,11,.15) 18%,
+    var(--gold,#b8860b) 50%,
+    rgba(184,134,11,.15) 82%,transparent 100%);
+  box-shadow:0 1px 0 rgba(212,168,75,.18);}
+.sb-cross::after{content:"";position:absolute;top:6px;left:38%;right:38%;
+  height:1px;background:linear-gradient(90deg,
+    transparent,rgba(184,134,11,.55),transparent);}
+.sb-x{display:flex;flex-direction:column;align-items:center;gap:3px;
+  text-decoration:none;color:var(--sbText,#d4c4a8);padding:4px 4px;width:100%;
+  border-radius:7px;transition:all .25s;}
+.sb-x:hover{background:rgba(184,134,11,.14);transform:translateY(-1px);}
+.sb-x-glyph{width:30px;height:30px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  border:1.2px solid rgba(212,196,168,.55);
+  color:var(--goldL,#d4a84b);font-family:"Noto Sans TC",sans-serif;font-size:14px;
+  background:rgba(184,134,11,.08);transition:all .25s;}
+.sb-x:hover .sb-x-glyph{border-color:var(--gold,#b8860b);color:#fff;
+  background:linear-gradient(135deg,var(--gold,#b8860b),var(--goldL,#d4a84b));
+  box-shadow:0 0 10px rgba(184,134,11,.5);}
+.sb-x-label{font-family:"Noto Sans TC",sans-serif;font-size:10.5px;
+  letter-spacing:1.2px;color:var(--sbText,#d4c4a8);opacity:.78;text-align:center;
+  line-height:1.25;}
+.sb-x:hover .sb-x-label{color:var(--goldL,#d4a84b);opacity:1;}
+.sb-x-hub .sb-x-glyph{background:linear-gradient(135deg,
+  rgba(184,134,11,.22),rgba(212,168,75,.18));
+  border-color:rgba(212,168,75,.55);color:var(--goldL,#d4a84b);font-size:13px;
+  font-weight:700;letter-spacing:1px;}
+
 </style>
 <meta name="wy-full-protection" content="v2-silent">
 <meta name="robots" content="index,follow,noai,noimageai">
@@ -375,7 +410,22 @@ body{font-size:20px!important;}
 <a class="sb-extra-item" href="https://weiwen0925.github.io/dazhidulun-5/" rel="noopener" target="_blank" title="《大智度論》第五卷"><span class="sb-extra-circle">五</span><span class="sb-extra-label" data-wytext="kvSagNvu"></span></a>
 <a class="sb-extra-item" href="https://weiwen0925.github.io/dazhidulun-7/" rel="noopener" target="_blank" title="《大智度論》第七卷"><span class="sb-extra-circle">七</span><span class="sb-extra-label" data-wytext="kvSagNn5"></span></a>
 <a class="sb-extra-item" href="https://weiwen0925.github.io/dazhidulun-0/" rel="noopener" target="_blank" title="《大智度論》門頁"><span class="sb-extra-circle">⌂</span><span class="sb-extra-label" data-wytext="nu+tjcH7"></span></a>
-</div></aside><main class="main"><div class="site-hero"><div class="hero-meta" data-wytext="nseggsnDgObNnfrcTsS2jVbzwFnI2u2dz89EnN/ciLyfysi0k8KtRInXxw=="></div><h1 data-wytext="kt2KgvjAjdPCncfjTu+BDZGd25yoyYT33w=="></h1><div class="hero-sub" data-wytext="nv6mgennjfrlkdTYi6C3yOCKn/GqjO7TgP/NkNLCibaODbSGV56ByIXC6Iz39ITy3cqagZO89p2V54Tp6UmByPWT+5k="></div><div class="hero-tagline" data-wytext="OhhFoOAKGggOtt2x713yrARQGhBZoOBXrfKg9B8BHEwW78ERIRZBEQwfSD8tVa7CTsi7rJOnzFnP5MZaj+3Fkvn6Ts+2ilbU097I2+xaiunDVYnCyciMiw=="></div><div data-wy-notice-hero="v3" data-wytext="keWBgvf9j+vekOz+ipeMytaln9etgdzjjvzQmtD5iICXxcm/n8Skg/jGj9z0ktvWgZGtxcu4kOCRjMrxjNb5kvnsh62VysOhn/GqgNzmgOnhnMzOh6ylERcRHwtIAlxYAB0QBR9PQQJBWgEfDhZYEBQYDUcHGgFaLm5eSBhWABxEEwQURxkLBhgGTA1ESBoMVRdCCxEfBgwWV0wGGlRaSEsTFBZBCxNASw1QFFRBDBZCSA5FWh1IBw4ICR0NGgJPAEJYSE1TGAtJARNXCgYQAQMYVBxGVVZVGA1ZAQVaSwtcTVpFDBZbTARWHhcXVEFOGBFfV0wBD19RSAIMVSZPCAAUA0taHRgBHl4MAllGAA4DHQ4PHBwGEEIWAUAZbTVZEhdKEwQTHwwKWhwaHVlFEVlQSZqt5l0YGkZaSR8FD0MWXgJIGxwQRgIVBAYWT09NDBpSG0AKVUfJ3Oyd/PaAz8qR1qDQlvPey/XJ3Oyf0NGAz8qR1qDQu8Hey+IRBhNVVo3c+IjN7smMi5KJ+p641I7G5I3c+IjL6MmMi5KJ+pyq3oL66lUGB0NLhq6LxdybkeGCgfraj97HmtD5i7uyy820n9KVgunIgMLymtDuUk9EAkjX/+jKzNyTzv+D08KR07bZkfrZ3MHFzsue0MSD2cCR1q3VrfQNWApdBQ9E" style="margin:28px auto 0;padding:18px 24px;max-width:720px;background:rgba(30,26,20,.55);border:1px solid rgba(184,134,11,.45);border-radius:12px;backdrop-filter:blur(4px);text-align:center;font-family:'Noto Sans TC','Microsoft JhengHei',sans-serif;font-size:13px;line-height:1.95;color:#c4a76c;letter-spacing:1px;"></div></div><div class="preface" id="preface"><h2 data-wytext="kM6FjOH/jeDpncT1"></h2><p data-wytext="lPmngcXdjvDekNbThoagzva6kvSageTXh9Xok/Tah5O7y96In/aEjPfTi+nonOv+i6WryOWwlPmggNnXgf7Fk/T7ja26xd2Jkcq4gc7cj/Lcluz4ibeyxOGtnvSYgNn6jeTTluz3i6ieyPuGkvaCgen8j+vekOnci4mRy9iEn+mQi93gjeDpkOH0ipe6yOWwkMGQjebxi+nokOH0i7uNzva8mMWhgd/2jNPwkP/0iZe6xdyblPmhjO7TgP/Nkvbxi5OByu2Jn/GqjMD2juXlluz4ja20"></p>
+</div>  <!-- wy-cross-nav v1 -->
+  <div class="sb-cross">
+    <a class="sb-x" href="https://weiwen0925.github.io/dazhidulun-5/" title="第五卷">
+      <span class="sb-x-glyph">←</span>
+      <span class="sb-x-label">卷五</span>
+    </a>
+    <a class="sb-x sb-x-hub" href="https://weiwen0925.github.io/dazhidulun-0/" title="大智度論門頁">
+      <span class="sb-x-glyph">智</span>
+      <span class="sb-x-label">門頁</span>
+    </a>
+    <a class="sb-x" href="https://weiwen0925.github.io/dazhidulun-7/" title="第七卷">
+      <span class="sb-x-glyph">→</span>
+      <span class="sb-x-label">卷七</span>
+    </a>
+  </div>
+</aside><main class="main"><div class="site-hero"><div class="hero-meta" data-wytext="nseggsnDgObNnfrcTsS2jVbzwFnI2u2dz89EnN/ciLyfysi0k8KtRInXxw=="></div><h1 data-wytext="kt2KgvjAjdPCncfjTu+BDZGd25yoyYT33w=="></h1><div class="hero-sub" data-wytext="nv6mgennjfrlkdTYi6C3yOCKn/GqjO7TgP/NkNLCibaODbSGV56ByIXC6Iz39ITy3cqagZO89p2V54Tp6UmByPWT+5k="></div><div class="hero-tagline" data-wytext="OhhFoOAKGggOtt2x713yrARQGhBZoOBXrfKg9B8BHEwW78ERIRZBEQwfSD8tVa7CTsi7rJOnzFnP5MZaj+3Fkvn6Ts+2ilbU097I2+xaiunDVYnCyciMiw=="></div><div data-wy-notice-hero="v3" data-wytext="keWBgvf9j+vekOz+ipeMytaln9etgdzjjvzQmtD5iICXxcm/n8Skg/jGj9z0ktvWgZGtxcu4kOCRjMrxjNb5kvnsh62VysOhn/GqgNzmgOnhnMzOh6ylERcRHwtIAlxYAB0QBR9PQQJBWgEfDhZYEBQYDUcHGgFaLm5eSBhWABxEEwQURxkLBhgGTA1ESBoMVRdCCxEfBgwWV0wGGlRaSEsTFBZBCxNASw1QFFRBDBZCSA5FWh1IBw4ICR0NGgJPAEJYSE1TGAtJARNXCgYQAQMYVBxGVVZVGA1ZAQVaSwtcTVpFDBZbTARWHhcXVEFOGBFfV0wBD19RSAIMVSZPCAAUA0taHRgBHl4MAllGAA4DHQ4PHBwGEEIWAUAZbTVZEhdKEwQTHwwKWhwaHVlFEVlQSZqt5l0YGkZaSR8FD0MWXgJIGxwQRgIVBAYWT09NDBpSG0AKVUfJ3Oyd/PaAz8qR1qDQlvPey/XJ3Oyf0NGAz8qR1qDQu8Hey+IRBhNVVo3c+IjN7smMi5KJ+p641I7G5I3c+IjL6MmMi5KJ+pyq3oL66lUGB0NLhq6LxdybkeGCgfraj97HmtD5i7uyy820n9KVgunIgMLymtDuUk9EAkjX/+jKzNyTzv+D08KR07bZkfrZ3MHFzsue0MSD2cCR1q3VrfQNWApdBQ9E" style="margin:28px auto 0;padding:18px 24px;max-width:720px;background:rgba(30,26,20,.55);border:1px solid rgba(184,134,11,.45);border-radius:12px;backdrop-filter:blur(4px);text-align:center;font-family:'Noto Sans TC','Microsoft JhengHei',sans-serif;font-size:13px;line-height:1.95;color:#c4a76c;letter-spacing:1px;"></div></div><div class="preface" id="preface"><h2 data-wytext="kM6FjOH/jeDpncT1"></h2><p data-wytext="lPmngcXdjvDekNbThoagzva6kvSageTXh9Xok/Tah5O7y96In/aEjPfTi+nonOv+i6WryOWwlPmggNnXgf7Fk/T7ja26xd2Jkcq4gc7cj/Lcluz4ibeyxOGtnvSYgNn6jeTTluz3i6ieyPuGkvaCgen8j+vekOnci4mRy9iEn+mQi93gjeDpkOH0ipe6yOWwkMGQjebxi+nokOH0i7uNzva8mMWhgd/2jNPwkP/0iZe6xdyblPmhjO7TgP/Nkvbxi5OByu2Jn/GqjMD2juXlluz4ja20"></p>
 <p data-wytext="kvSsgffBiunwl+zhi4u0yM+KlPmsgcf4j+3Uluz0i4u0y8aFk8GAgv3yi+nlkMr3hrStyt+LlPmsgcf4gfbbluz0i4u0yvy8nu6Igcj8jfbqluz0i4u0yNKTlPmsgcf4jdTVluz0i4u0xPmQk8GAgeL1i+nlkMr3i6Ggz/allfm5gNncgfT6kOH0i629xNq3keyOg/v+jsbwk/rMgZG6xfa9keGCgNn6j9zgkvjEiJqMyPOUkc6ch+H7gNfLncH8ipW8yPu2kOOpjMb6jtrxmtD5i6iHyOa9ksmggtPBjezNksTbh6+8xdC6mMW3gf7NgMLck9/gia+Mzva9ktaLgv3zi+npkvbxi5WOxdC6mMWhjOn9jcvKncfNiJ6jyvSLlPmhgvfNjtLhluz4ibeyy+CGn9+mh+H4jvXIkNHsiLiCy+qdksmqh+H2jc/mkNXOja27yP63kPuXg83WjNHkluz0ipe6yOWwmMWhg+XKi+nlk9zBiLG+zvawn+C2g8jAi+nlnPPKja23yOm/lPmsgcXYi+nlkNHEja23xPmQkvqih+H7jeXykPzxiKWmyc6xkuqsi932jvXkkNL5ipaTytqdkvSsgNv2jfrlluz5i6C3yOCKn96Og8jAi+npktTIiLmAzvaz"></p>
 <p data-wytext="kNWBgez7jNHtkP/0hpiBwsq9n9K7jN7Kj/3Vluz5iKS2xdGxk8Cmgc7cj/Lcluz4hpC/yOaglPmhjOLHgMTtkdX+hqKfxeCYlPmgi93gj+3FksjsiamXy/+xkOyii93ygMPOk9/gibeyyvKQkf6Ri93zi+nlk+78ibKTyMmyn9ihjOn9jdfKkMrsiKiRyMyXn/2Gi93ygfj2k8Xqibeyy++LkfyKi93zi+nlk+j6iamXysuSkN20i93yju3rkvbxh62sxPelmMWkh+H7jc3DkNP4iKWmyMaAmMWljMD2j/PgkMzfhq6Lwsq4lPmsgcf4jcbCkNvSi5eQwsq5ksOLg/Xlj/PgkPrxi5qRwsq4lPmvjMb6gOHjnc35ibaOxNa5mMWhjOnWgOLBkdX+iLivyc+ykse6gf3pjev9luz3"></p>
 <p data-wytext="keWBjffLgMfkk/DZi52xyPuwk8GugfL7jdT9k/nBia+Myc6xntmsi932jfngkP/0ipKryuOokveygv3zj/LKk8DUhqWxyt2RkNatg9bSgPD7mtD5ipWQycislPmhgezNiu/2kP/0jKukyt2Rlf+/g876i+npkPfuiZmsyMeVkdWMg9TLjNHkmtDvi6CByPOck8CmgNnxjeHikOH0ipW1yOWwmMWhgfL7jNHvkOTziYaWwsq9kNKNgNnxjeHiksP1ja20xdixn/moge7VjdfOkdT+iLuPys6MkOKDje3+juXtkPDjiZmUxN+UmMWhgNvcjebLnMzzi5e5xParn9eti932jv/Yk8P6i763yc+6kvCgg/v+i+nok/DZi763xdCwke6Fh+H3gOHjkOnDi5O6yuy1lPmhgujFjezskPnqi5O6zva8k8GAi932juPuk+PUi6ieyPuGnvuijN3Vj/PgkdLzh5O7yPiKn/2lh+H4"></p></div><section class="toc-section" id="toc"><h2 data-wytext="kMGQRIbhxkmN+eg="></h2><div class="toc-desc" data-wytext="kvSageTXSKvTVYXy5ci+sJOi9p2VyYT36YzyzovZwsi7rJKJ91nv00Gf7cGB+O2R1q7TvvcRtc4NgeTLjND5kOH0i7atyt2R"></div><div class="toc-grid"><div class="toc-card" data-href="#chapter-1" role="button" tabindex="0"><div class="toc-num" data-wytext="k8Gt"></div><div class="toc-text"><div class="toc-name" data-wytext="kvSsgffBge7vncfj"></div><div class="toc-sub" data-wytext="kvSsgffBj9HZktrEgZGsytaFke+agtr/j8DeneTyi4KQy+q4n9+mi932gP7tluz/i5OByNOCkM++h+HxgOHjkNXOi5WdyOCKkeGjh+H2jc/mkNXOja27yc6cnvi+"></div></div><a aria-label="第1品 YouTube 說明" class="toc-yt" data-wytext="le+bRInQwo/8+w==" href="https://youtu.be/1fSoTSPQS4M" rel="noopener" target="_blank"></a></div>
