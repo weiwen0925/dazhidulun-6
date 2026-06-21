@@ -661,8 +661,17 @@ body{font-size:20px!important;}
     13:"https://youtu.be/44On9h5tDQg",14:"https://youtu.be/bkiUY25ftYM",
     15:"https://youtu.be/_z04lcvMhpw",16:"https://youtu.be/aG7xnbaytOE",
     17:"https://youtu.be/BwSL-QUjTi4"};
+  var NM={1:"十喻釋論",2:"中觀邏輯解析",
+    3:"如炎",4:"諸法如水中月",
+    5:"如虛空",6:"如響",7:"如犍闥婆城",
+    8:"如夢",9:"諸法如影",10:"如鏡中像",
+    11:"諸法如化論",12:"十喻解空",
+    13:"無礙無所畏",14:"悉知心行",
+    15:"意無罣礙",16:"大忍成就",
+    17:"如實巧度"};
   var fab=document.getElementById('wyVideoFab');
   if(!fab) return;
+  var lbl=fab.querySelector('.wy-fab-label');
   var chapters=null,lastN=0,nearFoot=false;
   function pick(){
     if(!chapters) chapters=document.querySelectorAll('section.chapter[id^="chapter-"]');
@@ -683,7 +692,9 @@ body{font-size:20px!important;}
     if(n===lastN) return;
     var url=YT[n]; if(!url) return;
     fab.setAttribute('href',url);
-    fab.setAttribute('title','卷六 · 第 '+n+' 品 · YouTube 講解');
+    var nm=NM[n]||'本品影音';
+    fab.setAttribute('title','卷六 · 第 '+n+' 品 · '+nm+' · YouTube 講解');
+    if(lbl) lbl.textContent=nm;
     lastN=n;
   }
   var foot=document.querySelector('.site-footer');
