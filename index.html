@@ -2680,5 +2680,54 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classL
 upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
 })();</script>
 <!--WY-BH6P11:END-->
+<!--WY-BH6P12:BEGIN-->
+<style id="wy-bh6p12-css">
+.bh6p12-fabbox{position:fixed;right:22px;bottom:150px;z-index:123;display:none;}
+.bh6p12-fabbox.show{display:block;}
+.bh6p12-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#4a5a68,#232d36);padding:8px 15px;border-radius:22px;border:1px solid rgba(150,180,205,.55);box-shadow:0 4px 16px rgba(0,0,0,.32);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.bh6p12-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(120,160,200,.5);}
+.bh6p12-ic{font-size:15px;line-height:1;color:#bcd4ea;}
+.bh6p12-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.bh6p12-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.bh6p12-l2{font-size:13px;font-weight:700;color:#eef4fa;white-space:nowrap;}
+.bh6p12-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(22,26,30,.6);padding:16px;}
+.bh6p12-modal.open{display:flex;}
+.bh6p12-card{position:relative;background:#fbf7ee;max-width:1080px;width:100%;max-height:90vh;overflow:auto;border:1px solid #d3cdbf;border-radius:14px;padding:28px 22px 20px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.bh6p12-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#3f5160;}
+.bh6p12-card .sub{margin:0 0 12px;font-family:"Noto Sans TC",sans-serif;font-size:12.5px;color:#5b6b78;}
+.bh6p12-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#eceef0;color:#3f5160;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.bh6p12-close:hover{background:#dde2e6;}
+.bh6p12-tbl{width:100%;border-collapse:collapse;font-size:12.8px;margin:.2em 0 1em;}
+.bh6p12-tbl caption{font-family:"Noto Serif TC",serif;font-weight:700;color:#3f5160;font-size:14px;text-align:left;margin:.4em 0 .5em;}
+.bh6p12-tbl th,.bh6p12-tbl td{border:1px solid #d8d2c4;padding:.5em .65em;text-align:left;vertical-align:top;line-height:1.72;}
+.bh6p12-tbl thead th{background:#3f5160;color:#eef4fa;font-weight:700;position:sticky;top:0;}
+.bh6p12-tbl thead th:nth-child(1){width:32%;}.bh6p12-tbl thead th:nth-child(2){width:41%;}.bh6p12-tbl thead th:nth-child(3){width:27%;}
+.bh6p12-src{font-family:"Noto Serif TC",serif;color:#5a4636;background:#f6efe0;letter-spacing:.3px;}
+.bh6p12-guan{background:#eef2f5;color:#37505f;}
+.bh6p12-tbl tbody tr:nth-child(even) td{background:#faf6ee;}
+.bh6p12-tbl tbody tr:nth-child(even) td.bh6p12-guan{background:#e8eef2;}
+.bh6p12-tbl b{color:#8b2500;}
+.bh6p12-guan b{color:#2f6b5a;}
+.bh6p12-note{font-size:12px;color:#4a5560;line-height:1.95;background:#eef2f5;border-left:3px solid #7f9cb5;border-radius:0 6px 6px 0;padding:11px 14px;margin:2px 0 0;}
+.bh6p12-note b{color:#8b2500;}
+@media(max-width:900px){.bh6p12-fabbox{right:14px;}.bh6p12-tbl{font-size:11px;}.bh6p12-card{padding:22px 12px 14px;}}
+</style>
+<div class="bh6p12-fabbox" id="bh6p12Box"><button class="bh6p12-btn" id="bh6p12Btn" type="button" aria-label="開啟白話翻譯表"><span class="bh6p12-ic">譯</span><span class="bh6p12-ls"><span class="bh6p12-l1">本品 · 原文·白話·中觀</span><span class="bh6p12-l2">白話翻譯表</span></span></button></div><div class="bh6p12-modal" id="bh6p12Modal" role="dialog" aria-modal="true"><div class="bh6p12-card"><button class="bh6p12-close" id="bh6p12Close" type="button" aria-label="關閉">×</button><h3>卷六 · 第12品 白話翻譯表（十喻解空）</h3><p class="sub">《大智度論》卷六第12品・十喻解空：首問十喻排他性、首答難解空易解空心著處不著處，再問十喻何以心不著、再答易生易滅方便非究竟，終極詰難說空自相矛盾，以聲遮聲喻語言度眾方便 · 原文↔白話↔中觀概念 逐段對照</p><table class="bh6p12-tbl"><caption>十喻解空 · 原文｜白話翻譯｜中觀概念（共6段）</caption><thead><tr><th>原文</th><th>白話翻譯</th><th>中觀概念</th></tr></thead><tbody><tr><td class="bh6p12-src">若諸法十譬喻皆空無異者，何以但以十事為喻，不以山河石壁等為喻？</td><td>問：如果一切法都是空的、彼此並沒有差別，那麼為什麼偏偏只用夢、幻、泡、影等這十件事物來作譬喻，而不用山河、石壁這類事物來作譬喻呢？</td><td class="bh6p12-guan"><b>首問·十喻的「排他性」詰難——真理平等性與教學差異性如何並存？</b>——這是對整個「十喻」教學法提出的根本性質疑：既然空性是平等無差別的，山河石壁與夢幻泡影在「空」這一點上並無不同，那麼論主為何要特別偏愛選用十種特定的喻依，而不直接拿更龐大堅固的山河石壁作比喻？這個問題看似簡單，實則觸及中觀方法論的核心張力：勝義諦上的平等性，與世俗諦教學上的善巧差異性，究竟如何統一？</td></tr><tr><td class="bh6p12-src">諸法雖空而有分別，有難解空，有易解空。今以易解空喻難解空。復次，諸法有二種：有心著處，有心不著處。以心不著處解心著處。</td><td>答：一切法雖然本質都是空的，但在教學與認知的層面上仍然可以有所分別：有些法的空性比較難以理解（難解空），有些法的空性則比較容易理解（易解空）。現在正是用容易理解空性的事物，來譬喻、引導人們理解那些難以理解空性的事物。再者，一切法還可以分成兩種：一種是人心容易產生執著的對象，一種是人心不容易產生執著的對象。就用人心不會執著的事物，來化解、鬆動人心對另一類事物的執著。</td><td class="bh6p12-guan"><b>首答·難解空與易解空、心著處與心不著處——教學善巧的雙重理由</b>——論主的回答分兩層：第一層從「認知難度」立說——山河大地由於堅固龐大，凡夫直覺上認定它們真實存在，屬於「難解空」；夢幻泡影則因其明顯的虛幻性，人們直覺上就能接受其空，屬於「易解空」，所以善用「易解」來啟發「難解」。第二層從「心理執著」立說——人心對山河石壁容易產生執著（心著處），對水中月、鏡中像卻幾乎不會執著（心不著處），故借人心本不執著之物，來鬆動人心真正執著之物，這正是菩薩說法「以易導難、以淺破深」的善巧方便。</td></tr><tr><td class="bh6p12-src">此十譬喻，何以是心不著處？</td><td>問：您說這十種譬喻是「人心不會執著的對象」，但依據何在呢？</td><td class="bh6p12-guan"><b>再問·追問論證依據——不滿足於宣稱，要求給出理由</b>——這是一個緊追不捨的追問：對方並不滿足於論主「十喻是心不著處」這一籠統宣稱，而是進一步要求給出具體理由——憑什麼認定人們對夢幻泡影天生就不執著？這種層層追問的辯論方式，正是《大智度論》問答體裁的典型風格，也體現了論主對自身論點必須經得起反覆詰問的自我要求。</td></tr><tr><td class="bh6p12-src">是十事不久住，易生易滅故，以是故，是心不著處。復次，有人知十喻，誑惑耳目法，不知諸法空故，以此喻諸法。若有人於十譬喻中心著，不解種種難論，以此為有，是十譬喻不為其用，應更為說餘法門。</td><td>答：這十種事物都不能長久停留，很容易生起、也很容易消滅，正因為如此，人心才不會對它們產生執著。再者，有些人雖然知道十喻是用來迷惑耳目的表面現象，卻不懂得「一切法本自空寂」這個更根本的道理，所以才借用這十種容易理解的譬喻，來說明一切法皆空的道理。但如果有人反而執著在這十種譬喻本身上面，不能理解種種深奧的論辯道理，反而把這十喻當成了真實存在之物，那麼這十喻對他來說就完全失去了原本的教學作用，這時就應該改用其他的法門來為他說法了。</td><td class="bh6p12-guan"><b>易生易滅故不著，十喻乃方便非究竟——警惕「執指為月」的教學陷阱</b>——此答分三層：其一，十事易生易滅的特質正是人心不著的直接原因；其二，點明十喻的本質功能——它們只是「誑惑耳目」的方便譬喻，用以引導人契入「諸法空」這個更根本的道理，喻依本身並非目的；其三，也是最深刻的警示——若有人反過來執著十喻本身，十喻便徹底喪失其教學效用，此時必須換用其他法門，這正呼應了「因指見月，得月忘指」的智慧，十喻終究是渡河之筏，而非彼岸本身。</td></tr><tr><td class="bh6p12-src">若諸法都空，不生不滅，是十譬喻等種種譬喻，種種因緣論議，我已悉知為空。若諸法都空，不應說是喻；若說是喻，是為不空。</td><td>問：如果一切法完全都是空的、不生不滅，那麼您用十喻等種種譬喻、種種因緣論證來說明的道理，我已經完全明白、也已經知道那就是「空」了。而且，如果一切法真的完全都是空的，那麼照理說就不應該再去「說」這些譬喻才對；可是您卻仍然開口說出這些譬喻，這豈不正好證明「說」這件事本身、以及被說出來的內容，並不是空的嗎？</td><td class="bh6p12-guan"><b>終極詰難——「說空」這個行為本身豈不自相矛盾？</b>——這是全論典型的「自我指涉式」詰難，堪稱最犀利的收尾問難：對方抓住一個精妙的悖論——如果諸法真的一切皆空、不生不滅，那麼「說法」這個動作本身就是一種「生」的活動；既然論主能夠開口說出種種譬喻與論證，這個「說」的行為及其內容，豈不正好反過來證明了「有」，而不是真正的「空」？這個詰難直指語言與空性之間最根本的張力。</td></tr><tr><td class="bh6p12-src">我說空，破諸法有。今所說者，若說有，先已破；若說無，不應難！譬如執事比丘高聲舉手唱言：「眾皆寂靜！」是為以聲遮聲，非求聲也。以是故，雖說諸法空，不生不滅，愍念眾生故，雖說非有也。以是故說「諸法如化」。</td><td>答：我說「空」，目的是為了破除眾生對「諸法實有」的執著。現在你所質疑的「說」這件事，如果你是要問「這個說是不是『有』」，那麼「有」這個立場我早就已經破斥過了；如果你要問「這個說是不是『無』」，那你就不應該用這個來詰難我，因為我從來沒有主張斷滅式的「無」！這就好比僧團中負責維持秩序的維那比丘，高聲舉手唱言：「大眾請保持寂靜！」——這是用「聲音」來遮止其他的「聲音」，而不是他本身想要刻意去追求發出聲音。因此，雖然我口中說著一切法空、不生不滅，但那只是因為悲愍憐念眾生的緣故，才方便地說法；雖然說了，但所說的內容本身依然不是「實有」。因此經中說：「一切法就像變化之物一樣。」</td><td class="bh6p12-guan"><b>以聲遮聲喻——語言是渡河之筏，說空不落入「有」的自相矛盾</b>——這是全品邏輯與慈悲交融的最高潮：論主先以「破有」精準定位自己的立場——「說空」的目的純粹是為了破除「實有」的執著，而非另立一個「實有的空」；接著以「維那唱令寂靜」這一絕妙譬喻收束全部辯論——維那用聲音喊「安靜」，那聲音本身雖然存在，目的卻是為了止息喧鬧，而非戀慕聲音本身；同理，論主雖然口說種種法語，其目的純粹是為了止息眾生對「有」的執著，出於悲愍度眾的方便，而非戀著語言文字本身為真實。這一喻徹底化解了「說空是否自相矛盾」的終極詰難，也為十喻乃至全論的方法論作了最圓滿的總結：一切言說教法，終究是「以聲遮聲」的度眾方便，而非究竟實相本身，遂以「諸法如化」總收十喻。</td></tr></tbody></table><p class="bh6p12-note">十喻總論「十喻解空」，以三輪問答收束十喻教學法：首問「諸法皆空何以獨用十事為喻不用山河石壁」，答以難解空易解空、心著處不著處，以易導難、以淺破深；再問「十喻何以是心不著處」，答以易生易滅故不著，並警示若執十喻本身為有則十喻不為其用、應更說餘法門；終極詰難「若諸法都空不生不滅，說喻本身豈非自相矛盾」，答以「我說空破諸法有」、以聲遮聲喻——維那唱「眾皆寂靜」是以聲止聲非求聲，說空是為破有非另立實有之空，雖說諸法空而愍念眾生故方便說法，終歸「諸法如化」。白話忠於原意、不增不減。　中觀關鍵詞：難解空與易解空　心著處與心不著處　方便非究竟因指見月　以聲遮聲破有非立空</p></div></div>
+<script id="wy-bh6p12-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("bh6p12Btn"),BOX=document.getElementById("bh6p12Box"),MODAL=document.getElementById("bh6p12Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=11;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+/*BHPLACE*/function place(){var z=document.getElementById("c6p12Box"),eb=document.querySelector(".wy-ebox"),b=null;if(z){var r=z.getBoundingClientRect();if(r.height>4)b=Math.round(window.innerHeight-r.top)+8;}if(b===null&&eb){var r2=eb.getBoundingClientRect();if(r2.height>4)b=Math.round(window.innerHeight-r2.top)+8;}if(b!==null)BOX.style.bottom=b+"px";}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="bh6p12Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-BH6P12:END-->
 </body>
 </html>
