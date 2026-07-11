@@ -2237,5 +2237,56 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classL
 upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
 })();</script>
 <!--WY-BH6P2:END-->
+<!--WY-BH6P3:BEGIN-->
+<style id="wy-bh6p3-css">
+.bh6p3-fabbox{position:fixed;right:22px;bottom:150px;z-index:123;display:none;}
+.bh6p3-fabbox.show{display:block;}
+.bh6p3-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#4a5a68,#232d36);padding:8px 15px;border-radius:22px;border:1px solid rgba(150,180,205,.55);box-shadow:0 4px 16px rgba(0,0,0,.32);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.bh6p3-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(120,160,200,.5);}
+.bh6p3-ic{font-size:15px;line-height:1;color:#bcd4ea;}
+.bh6p3-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.bh6p3-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.bh6p3-l2{font-size:13px;font-weight:700;color:#eef4fa;white-space:nowrap;}
+.bh6p3-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(22,26,30,.6);padding:16px;}
+.bh6p3-modal.open{display:flex;}
+.bh6p3-card{position:relative;background:#fbf7ee;max-width:1080px;width:100%;max-height:90vh;overflow:auto;border:1px solid #d3cdbf;border-radius:14px;padding:28px 22px 20px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.bh6p3-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#3f5160;}
+.bh6p3-card .sub{margin:0 0 12px;font-family:"Noto Sans TC",sans-serif;font-size:12.5px;color:#5b6b78;}
+.bh6p3-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#eceef0;color:#3f5160;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.bh6p3-close:hover{background:#dde2e6;}
+.bh6p3-tbl{width:100%;border-collapse:collapse;font-size:12.8px;margin:.2em 0 1em;}
+.bh6p3-tbl caption{font-family:"Noto Serif TC",serif;font-weight:700;color:#3f5160;font-size:14px;text-align:left;margin:.4em 0 .5em;}
+.bh6p3-tbl th,.bh6p3-tbl td{border:1px solid #d8d2c4;padding:.5em .65em;text-align:left;vertical-align:top;line-height:1.72;}
+.bh6p3-tbl thead th{background:#3f5160;color:#eef4fa;font-weight:700;position:sticky;top:0;}
+.bh6p3-tbl thead th:nth-child(1){width:32%;}.bh6p3-tbl thead th:nth-child(2){width:41%;}.bh6p3-tbl thead th:nth-child(3){width:27%;}
+.bh6p3-src{font-family:"Noto Serif TC",serif;color:#5a4636;background:#f6efe0;letter-spacing:.3px;}
+.bh6p3-qa{font-family:"Noto Serif TC",serif;color:#3d4f2f;background:#eef2e2;letter-spacing:.3px;}
+.bh6p3-guan{background:#eef2f5;color:#37505f;}
+.bh6p3-tbl tbody tr:nth-child(even) td{background:#faf6ee;}
+.bh6p3-tbl tbody tr:nth-child(even) td.bh6p3-guan{background:#e8eef2;}
+.bh6p3-tbl tbody tr:nth-child(even) td.bh6p3-qa{background:#e7ecdb;}
+.bh6p3-tbl b{color:#8b2500;}
+.bh6p3-guan b{color:#2f6b5a;}
+.bh6p3-note{font-size:12px;color:#4a5560;line-height:1.95;background:#eef2f5;border-left:3px solid #7f9cb5;border-radius:0 6px 6px 0;padding:11px 14px;margin:2px 0 0;}
+.bh6p3-note b{color:#8b2500;}
+@media(max-width:900px){.bh6p3-fabbox{right:14px;}.bh6p3-tbl{font-size:11px;}.bh6p3-card{padding:22px 12px 14px;}}
+</style>
+<div class="bh6p3-fabbox" id="bh6p3Box"><button class="bh6p3-btn" id="bh6p3Btn" type="button" aria-label="開啟白話翻譯表"><span class="bh6p3-ic">譯</span><span class="bh6p3-ls"><span class="bh6p3-l1">本品 · 原文·白話·中觀</span><span class="bh6p3-l2">白話翻譯表</span></span></button></div><div class="bh6p3-modal" id="bh6p3Modal" role="dialog" aria-modal="true"><div class="bh6p3-card"><button class="bh6p3-close" id="bh6p3Close" type="button" aria-label="關閉">×</button><h3>卷六 · 第3品 白話翻譯表（如炎）</h3><p class="sub">《大智度論》卷六第3品・如炎：陽焰以日光風動塵故曠野見如野馬，男相女相亦如是為結使煩惱日光、諸行塵、邪憶念風三緣和合之假相；遠見為水近則無水想，喻遠近聖法認知解析度之別 · 原文↔白話↔中觀概念 逐段對照</p><table class="bh6p3-tbl"><caption>如炎喻 · 原文｜白話翻譯｜中觀概念（共3段）</caption><thead><tr><th>原文</th><th>白話翻譯</th><th>中觀概念</th></tr></thead><tbody><tr><td class="bh6p3-src">「如炎」者，炎以日光風動塵故，曠野中見如野馬，無智人初見謂之為水。男相、女相亦如是，結使煩惱日光熱諸行塵，邪憶念風，生死曠野中轉，無智慧者謂為一相，為男、為女。是名「如炎」。</td><td>所謂「如炎」（像陽焰一樣），是指陽焰乃是由於日光照射，加上風吹動塵埃所形成的，在曠野之中看起來就像奔跑的野馬一般，缺乏智慧的人初次見到，還誤以為那是水。男相、女相也是同樣的道理：以煩惱結使作為「日光」，以種種造作（諸行）作為「塵埃」，以錯誤的憶念分別作為「風」，在生死的曠野中流轉不息，缺乏智慧的人便將這種種因緣和合的假相誤認為是單一固定的相狀，執著地分別為「男」、為「女」。這就叫做「如炎」。</td><td class="bh6p3-guan"><b>如炎喻——日光、風、塵三緣和合的錯覺</b>——陽焰本身並非水，而是日光、風、塵埃三種條件聚合下產生的視覺錯覺；男女之相同樣是煩惱（日光）、諸行（塵）、邪憶念（風）三緣和合而成的認知投射，並無一個真實固定的「男」或「女」自性存在，只是無智之人將因緣假合誤看成單一實有之相。</td></tr><tr><td class="bh6p3-src">復次，若遠見炎，想為水，近則無水想。無智人亦如是，若遠聖法，不知無我，不知諸法空，於陰、界、入性空法中，生人相、男相、女相；近聖法，則知諸法實相，是時虛誑種種妄想盡除。</td><td>再者，如果遠遠地看見陽焰，會誤以為是水，但走近一看，那種以為是水的念頭就消失了。缺乏智慧的人也是同樣的道理：如果遠離聖者的正法，就不了解「無我」的道理，也不明白一切法皆空的道理，因而在五陰、十八界、十二入這些本性空寂的法之中，妄自生起「人相」、「男相」、「女相」等種種執著；但如果親近聖者的正法，就能了知諸法的真實相狀，這時候，種種虛妄不實的錯誤想法便會全部消除。</td><td class="bh6p3-guan"><b>遠近之喻——親疏聖法決定認知的解析度</b>——「遠見為水、近則無水」是全喻的樞紐：距離（親疏聖法的程度）決定了認知的解析度。遠離正法者在空性的陰、界、入中妄執人相男女相，如同遠望陽焰誤認為水；親近正法、體悟諸法實相之後，一切虛妄分別自然消散，如同走近陽焰時水的錯覺自然瓦解。</td></tr><tr><td class="bh6p3-src">以是故說「諸菩薩知諸法如炎」。</td><td>因此經中說：「諸位菩薩了知一切法都像陽焰一樣（看似有形而實無自性）。」</td><td class="bh6p3-guan"><b>總收本品——回扣十喻第二位</b>——以「諸菩薩知諸法如炎」總結全品，呼應第一品「十喻總綱」中「如炎」列於第二位的位置，完成十喻系列第二個譬喻的完整論證，並為下一品「如水中月」的展開預作準備。</td></tr></tbody></table><p class="bh6p3-note">十喻第二品，篇幅精簡而義理完足：以陽焰（炎）由日光、風、塵三緣和合而成、遠望似水近觀則無為喻，說明男相、女相同樣是煩惱、諸行、邪憶念三緣和合的認知投射，並無單一固定的自性可得；復以「遠聖法則妄執生、近聖法則實相顯」申明親疏正法決定認知的解析度，終以「諸菩薩知諸法如炎」總收，呼應首品十喻次第。白話忠於原意、不增不減。　中觀關鍵詞：如炎喻三緣和合　遠近之喻認知解析度　諸菩薩知諸法如炎</p></div></div>
+<script id="wy-bh6p3-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("bh6p3Btn"),BOX=document.getElementById("bh6p3Box"),MODAL=document.getElementById("bh6p3Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=2;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+/*BHPLACE*/function place(){var z=document.getElementById("c6p3Box"),eb=document.querySelector(".wy-ebox"),b=null;if(z){var r=z.getBoundingClientRect();if(r.height>4)b=Math.round(window.innerHeight-r.top)+8;}if(b===null&&eb){var r2=eb.getBoundingClientRect();if(r2.height>4)b=Math.round(window.innerHeight-r2.top)+8;}if(b!==null)BOX.style.bottom=b+"px";}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="bh6p3Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-BH6P3:END-->
 </body>
 </html>
